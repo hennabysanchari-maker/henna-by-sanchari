@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henna by Sanchari</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for "Inter" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #4A4A4A;
+            background-color: #F8F4E3;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .text-brown {
+            color: #8B4513;
+        }
+        .bg-beige {
+            background-color: #F8F4E3;
+        }
+        .btn-primary {
+            background-color: #A0522D;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .social-link {
+            transition: transform 0.2s, color 0.2s;
+        }
+        .social-link:hover {
+            transform: translateY(-2px);
+            color: #A0522D;
+        }
+        .logo-container {
+            max-width: 300px; /* Control the logo size */
+            margin: 0 auto;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .flex {
+            display: flex;
+        }
+        .justify-center {
+            justify-content: center;
+        }
+        .items-center {
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="bg-beige">
+
+    <!-- Header / Hero Section -->
+    <header role="banner" class="relative overflow-hidden pt-16 pb-32 text-center bg-gray-100/50">
+        <div class="absolute inset-0 z-0" aria-hidden="true">
+            <!-- Background image with opacity -->
+            <img src="https://placehold.co/1920x1080/D2B48C/333?text=Henna+Art+Background" alt="" class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="relative z-10 container mx-auto px-4 py-16 sm:py-24">
+            <!-- Brand Logo -->
+            <div class="logo-container mb-8">
+                <!-- The image source has been updated to use a relative path. -->
+                <img src="logo.jpg" alt="Henna by Sanchari business logo" class="w-full h-auto">
+            </div>
+            
+            <p class="mt-4 text-xl sm:text-2xl text-gray-700 font-medium">Timeless art for modern celebrations.</p>
+            <!-- The 'href' links to a section on the same page, providing a clear destination for screen readers -->
+            <a href="#contact" class="mt-8 inline-block px-8 py-4 rounded-full text-lg font-bold text-white btn-primary shadow-lg">
+                Book a consultation
+            </a>
+        </div>
+    </header>
+    
+    <!-- Main Content Area -->
+    <main role="main">
+        <!-- About Section -->
+        <section id="about" class="container mx-auto px-4 py-16">
+            <h2 class="sr-only">About the Artist</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- IMPORTANT: The alt text should be a clear description of the image. -->
+                    <img src="https://placehold.co/600x400/D2B48C/333?text=Sanchari" alt="A photo of Sanchari, the artist" class="w-full h-auto rounded-3xl shadow-xl">
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-bold text-brown mb-4">About the Artist</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Hello! My name is Sanchari, and I am a passionate henna artist dedicated to creating beautiful and meaningful designs. From intricate bridal patterns to fun, celebratory motifs, I believe that every design tells a unique story. My journey began with a love for traditional art forms, and I continue to be inspired by the rich cultural heritage of henna. Let me help you bring your vision to life for your next special occasion.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section - Updated to link to Instagram -->
+        <section id="portfolio" class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-brown mb-6">My Work</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Discover my latest henna creations and full portfolio on Instagram.
+                </p>
+                <!-- The 'target="_blank"' is a useful feature but requires adding a rel="noopener noreferrer" for security and performance. -->
+                <a href="https://www.instagram.com/henna_by_sanchari/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-4 rounded-full text-lg font-bold text-white btn-primary shadow-lg">
+                    View My Instagram Portfolio
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="container mx-auto px-4 py-16">
+            <h2 class="text-4xl font-bold text-brown text-center mb-12">Services Offered</h2>
+            <!-- Updated the grid layout to prevent text from truncating on smaller screens. -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-brown mb-2">Bridal Henna</h3>
+                    <p class="text-gray-600">
+                        Elegant and intricate bridal henna for your special day. Custom designs that reflect your personality and style.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-brown mb-2">Party & Event Henna</h3>
+                    <p class="text-gray-600">
+                        Henna services for parties, corporate events, and gatherings. Perfect for adding a unique touch to any celebration.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-brown mb-2">Private Appointments</h3>
+                    <p class="text-gray-600">
+                        Personalized one-on-one sessions for custom designs, small motifs, or touch-ups.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-brown mb-2">Henna Class</h3>
+                    <p class="text-gray-600">
+                        Learn the art of henna from the basics to intricate designs. Private and group workshops available for all skill levels.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-brown text-center mb-12">Get in Touch</h2>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-lg">
+                    <p class="text-center text-lg text-gray-600 mb-6">
+                        Ready to book or have a question? Contact me directly!
+                    </p>
+
+                    <!-- Quick Contact Links with ARIA labels for screen readers -->
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                        <!-- Phone Call -->
+                        <a href="tel:YOUR_PHONE_NUMBER_HERE" aria-label="Call me on the phone" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 rounded-full text-white bg-blue-500 font-bold transition-transform duration-200 hover:scale-105">
+                            <i class="fas fa-phone text-xl mr-2" aria-hidden="true"></i> Call
+                        </a>
+
+                        <!-- Text Message -->
+                        <a href="sms:YOUR_PHONE_NUMBER_HERE" aria-label="Send a text message" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 rounded-full text-white bg-gray-500 font-bold transition-transform duration-200 hover:scale-105">
+                            <i class="fas fa-sms text-xl mr-2" aria-hidden="true"></i> Text
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="bg-gray-900 py-8 text-center text-gray-300">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Henna by Sanchari. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://www.instagram.com/henna_by_sanchari/" target="_blank" aria-label="Visit my Instagram profile" rel="noopener noreferrer" class="social-link text-gray-400 hover:text-white mx-2">
+                    <i class="fab fa-instagram text-2xl" aria-hidden="true"></i>
+                </a>
+                <!-- You can add other social media links here, like Facebook or TikTok -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
