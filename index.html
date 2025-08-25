@@ -58,12 +58,67 @@
         .items-center {
             align-items: center;
         }
+        .carousel-container {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        .carousel-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #prevBtn {
+            left: 1rem;
+        }
+        #nextBtn {
+            right: 1rem;
+        }
+        .carousel-info {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
     </style>
 </head>
 <body class="bg-beige">
 
     <!-- Header / Hero Section -->
     <header role="banner" class="relative overflow-hidden pt-16 pb-32 text-center bg-gray-100/50">
+        <div class="absolute inset-0 z-0" aria-hidden="true">
+            <!-- Background image with opacity -->
+            <img src="https://placehold.co/1920x1080/D2B48C/333?text=Henna+Art+Background" alt="" class="w-full h-full object-cover opacity-30">
+        </div>
         <div class="relative z-10 container mx-auto px-4 py-16 sm:py-24">
             <!-- Brand Logo -->
             <div class="logo-container mb-8">
@@ -74,7 +129,7 @@
             <p class="mt-4 text-xl sm:text-2xl text-gray-700 font-medium">Timeless art for modern celebrations.</p>
             <!-- The 'href' links to a section on the same page, providing a clear destination for screen readers -->
             <a href="#contact" class="mt-8 inline-block px-8 py-4 rounded-full text-lg font-bold text-white btn-primary shadow-lg">
-                Book An Appointment!
+                Book a consultation
             </a>
         </div>
     </header>
@@ -86,8 +141,8 @@
             <h2 class="sr-only">About the Artist</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <!-- IMPORTANT: The alt text should be a clear description of the image. -->
-                    <img src="henna-art.jpg" alt="A photo of Sanchari, the artist" class="w-full h-auto rounded-3xl shadow-xl">
+                    <!-- The image source has been updated to use your photo. -->
+                    <img src="henna-about.jpg" alt="Two hands with detailed henna designs and light blue nail polish." class="w-full h-auto rounded-3xl shadow-xl">
                 </div>
                 <div class="text-center md:text-left">
                     <h2 class="text-4xl font-bold text-brown mb-4">About the Artist</h2>
@@ -98,16 +153,56 @@
             </div>
         </section>
 
-        <!-- Portfolio Section - Updated to link to Instagram -->
-        <section id="portfolio" class="bg-gray-50 py-16">
+        <!-- New Section: Henna and Culture - Made more engaging -->
+        <section id="henna-culture" class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-brown text-center mb-6">Henna: An Art Form for Every Story</h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Henna, or mehndi, is so much more than a beautiful design—it's a living tradition that connects generations. For thousands of years, this ancient art form has been a central part of life’s most special moments.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-brown mb-2">The Cultural Connection</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Across South Asia, the Middle East, and Africa, henna is a powerful symbol. It's used in weddings to prepare a bride for her new life, during festivals to celebrate community, and at religious events to mark significant moments. Each intricate pattern is a testament to history, tradition, and personal expression, making every design a unique narrative on the skin.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-brown mb-2">Why Natural Henna Matters</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Your safety is my priority. That's why I am committed to using only pure, 100% natural henna. This safe paste, made from the leaves of the henna plant, gives a beautiful, reddish-brown stain without any harsh chemicals. Be wary of "black henna," which often contains PPD, a chemical that can cause severe allergic reactions and permanent scarring. With natural henna, you get stunning art and peace of mind.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Image Carousel with Instagram link -->
+        <section id="portfolio-carousel" class="py-16">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold text-brown mb-6">My Work</h2>
+                <h2 class="text-4xl font-bold text-brown mb-6">A Showcase of My Work</h2>
                 <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Discover my latest henna creations and full portfolio on Instagram.
+                    Explore a collection of my favorite henna designs, from intricate bridal work to playful party motifs.
                 </p>
-                <!-- The 'target="_blank"' is a useful feature but requires adding a rel="noopener noreferrer" for security and performance. -->
-                <a href="https://www.instagram.com/henna_by_sanchari/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-4 rounded-full text-lg font-bold text-white btn-primary shadow-lg">
-                    View My Instagram Portfolio
+                <div class="carousel-container">
+                    <div class="carousel-images">
+                        <!-- Images from your uploads, with descriptive alt text -->
+                        <img src="henna-1.jpg" alt="A photo of intricate floral and traditional henna designs on both hands." >
+                        <img src="henna-2.jpg" alt="A close-up photo of a detailed henna sleeve design on a hand and forearm." >
+                        <img src="henna-3.jpg" alt="A photo of a matching henna design on two hands with black and white nail polish." >
+                        <img src="henna-4.jpg" alt="A photo of two hands with intricate henna art and glittering nail polish." >
+                    </div>
+                    <button id="prevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-info">
+                        <span id="currentImage">1</span> / <span id="totalImages">4</span>
+                    </div>
+                </div>
+                 <!-- The 'target="_blank"' is a useful feature but requires adding a rel="noopener noreferrer" for security and performance. -->
+                <a href="https://www.instagram.com/henna_by_sanchari/" target="_blank" rel="noopener noreferrer" class="inline-block mt-8 px-8 py-4 rounded-full text-lg font-bold text-white btn-primary shadow-lg">
+                    View Full Portfolio on Instagram
                 </a>
             </div>
         </section>
@@ -137,7 +232,7 @@
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300">
                     <h3 class="text-2xl font-semibold text-brown mb-2">Henna Class</h3>
-                    <p class="text-gray-600">
+                    <p class="text-600">
                         Learn the art of henna from the basics to intricate designs. Private and group workshops available for all skill levels.
                     </p>
                 </div>
@@ -156,15 +251,15 @@
                     <!-- Quick Contact Links with ARIA labels for screen readers -->
                     <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
                         <!-- Phone Call -->
-                        <a href="tel:+1-512-337-6808" aria-label="Call me on the phone" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 rounded-full text-white bg-blue-500 font-bold transition-transform duration-200 hover:scale-105">
+                        <a href="tel:YOUR_PHONE_NUMBER_HERE" aria-label="Call me on the phone" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 rounded-full text-white bg-blue-500 font-bold transition-transform duration-200 hover:scale-105">
                             <i class="fas fa-phone text-xl mr-2" aria-hidden="true"></i> Call
                         </a>
 
                         <!-- Text Message -->
-                        <a href="sms:+1-512-337-6808" aria-label="Send a text message" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 rounded-full text-white bg-gray-500 font-bold transition-transform duration-200 hover:scale-105">
+                        <a href="sms:YOUR_PHONE_NUMBER_HERE" aria-label="Send a text message" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 rounded-full text-white bg-gray-500 font-bold transition-transform duration-200 hover:scale-105">
                             <i class="fas fa-sms text-xl mr-2" aria-hidden="true"></i> Text
                         </a>
-
+                        
                         <!-- Email -->
                         <a href="mailto:YOUR_EMAIL_ADDRESS_HERE" aria-label="Send an email" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 rounded-full text-white bg-red-500 font-bold transition-transform duration-200 hover:scale-105">
                             <i class="fas fa-envelope text-xl mr-2" aria-hidden="true"></i> Email
@@ -178,7 +273,7 @@
     <!-- Footer -->
     <footer role="contentinfo" class="bg-gray-900 py-8 text-center text-gray-300">
         <div class="container mx-auto px-4">
-            <p>&copy; 2025 Henna by Sanchari. All rights reserved.</p>
+            <p>&copy; 2024 Henna by Sanchari. All rights reserved.</p>
             <div class="mt-4">
                 <a href="https://www.instagram.com/henna_by_sanchari/" target="_blank" aria-label="Visit my Instagram profile" rel="noopener noreferrer" class="social-link text-gray-400 hover:text-white mx-2">
                     <i class="fab fa-instagram text-2xl" aria-hidden="true"></i>
@@ -197,6 +292,39 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Carousel functionality
+        const carouselImages = document.querySelector('.carousel-images');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentImageSpan = document.getElementById('currentImage');
+        const totalImagesSpan = document.getElementById('totalImages');
+        const images = carouselImages.querySelectorAll('img');
+
+        let currentIndex = 0;
+        const totalImages = images.length;
+
+        // Set the total number of images
+        totalImagesSpan.textContent = totalImages;
+
+        // Function to update the carousel display
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselImages.style.transform = `translateX(${offset}%)`;
+            currentImageSpan.textContent = currentIndex + 1;
+        }
+
+        // Event listener for the "Next" button
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        });
+
+        // Event listener for the "Previous" button
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
         });
     </script>
 </body>
