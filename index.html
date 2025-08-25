@@ -58,6 +58,7 @@
         .items-center {
             align-items: center;
         }
+        /* Adjusted carousel styling for better responsiveness */
         .carousel-container {
             position: relative;
             max-width: 700px;
@@ -115,10 +116,6 @@
 
     <!-- Header / Hero Section -->
     <header role="banner" class="relative overflow-hidden pt-16 pb-32 text-center bg-gray-100/50">
-        <div class="absolute inset-0 z-0" aria-hidden="true">
-            <!-- Background image with opacity -->
-            <img src="https://placehold.co/1920x1080/D2B48C/333?text=Henna+Art+Background" alt="" class="w-full h-full object-cover opacity-30">
-        </div>
         <div class="relative z-10 container mx-auto px-4 py-16 sm:py-24">
             <!-- Brand Logo -->
             <div class="logo-container mb-8">
@@ -129,7 +126,7 @@
             <p class="mt-4 text-xl sm:text-2xl text-gray-700 font-medium">Timeless art for modern celebrations.</p>
             <!-- The 'href' links to a section on the same page, providing a clear destination for screen readers -->
             <a href="#contact" class="mt-8 inline-block px-8 py-4 rounded-full text-lg font-bold text-white btn-primary shadow-lg">
-                Book a consultation
+                Book an Appointment!
             </a>
         </div>
     </header>
@@ -139,8 +136,9 @@
         <!-- About Section -->
         <section id="about" class="container mx-auto px-4 py-16">
             <h2 class="sr-only">About the Artist</h2>
+            <!-- The 'grid' is now responsive, and the image container has max-width on smaller screens. -->
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
+                <div class="mx-auto max-w-sm md:max-w-none">
                     <!-- The image source has been updated to use your photo. -->
                     <img src="henna-about.jpg" alt="Two hands with intricate henna designs, one featuring a lotus flower on the palm. A green plant is visible in the foreground." class="w-full h-auto rounded-3xl shadow-xl">
                 </div>
@@ -186,13 +184,14 @@
                 <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
                     Explore a collection of my favorite henna designs, from intricate bridal work to playful party motifs.
                 </p>
-                <div class="carousel-container">
+                <!-- Added responsive classes to the carousel container for better control -->
+                <div class="carousel-container mx-auto">
                     <div class="carousel-images">
                         <!-- Images from your uploads, with descriptive alt text -->
                         <img src="henna-1.jpg" alt="A photo of intricate floral and traditional henna designs on both hands." >
-                        <img src="henna-2.jpg" alt="A close-up photo of a detailed henna design on a hand and forearm." >
-                        <img src="henna-3.jpg" alt="Two hands with detailed mandala henna designs and light blue nail polish." >
-                        <img src="henna-4.jpg" alt="A photo of two hands with intricate henna art." >
+                        <img src="henna-2.jpg" alt="A close-up photo of a detailed henna sleeve design on a hand and forearm." >
+                        <img src="henna-3.jpg" alt="A photo of a matching henna design on two hands with black and white nail polish." >
+                        <img src="henna-4.jpg" alt="A photo of two hands with intricate henna art and glittering nail polish." >
                     </div>
                     <button id="prevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>
                     <button id="nextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>
